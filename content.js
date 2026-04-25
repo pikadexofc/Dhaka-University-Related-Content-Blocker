@@ -1,6 +1,6 @@
 (async function () {
   const defaultKeywords = [
-    "du", "d.u.", "dhaka university", "university of dhaka", "dhaka univ", "univ of dhaka", "dhaka u", "du campus", "uod", "dhaka viswavidyalaya", "ঢাবি", "ঢাকা বিশ্ববিদ্যালয়", "ঢাকা ভার্সিটি", "ঢাবি ক্যাম্পাস", "ঢাবির", "ঢাকা বিশ্ববিদ্যালয়ের", "ঢাকা বিশ্ববিদ্যালয়", "ঢাকা ইউনিভার্সিটি", "ডিইউ", "ডি.ইউ.", "sm hall", "tsc", "teacher student center", "curzon hall", "madhur canteen", "raju sculpture", "arts building du", "kala bhaban", "du admission", "du result", "ducsu"
+    "du", "d.u.", "dhaka university", "university of dhaka", "dhaka univ", "univ of dhaka", "dhaka u", "du campus", "uod", "dhaka viswavidyalaya", "ঢাবি", "ঢাকা বিশ্ববিদ্যালয়", "ঢাকা ভার্সিটি", "ঢাবি ক্যাম্পাস", "ঢাবির", "ঢাকা বিশ্ববিদ্যালয়ের", "ঢাকা বিশ্ববিদ্যালয়", "ঢাকা ইউনিভার্সিটি", "ডিইউ", "ডি.ইউ.", "sm hall", "tsc", "teacher student center", "curzon hall", "madhur canteen", "raju sculpture", "arts building du", "kala bhaban", "du admission", "du result", "ducsu", "dhaka central university all news"
   ];
 
   const style = document.createElement('style');
