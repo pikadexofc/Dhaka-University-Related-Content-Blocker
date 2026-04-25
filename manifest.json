@@ -4,6 +4,12 @@
   "author": "Pickko",
   "version": "3.0",
   "description": "Zero-lag semantic blocking for custom keywords, News, and Social Media. Made for fun by Pickko.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "scb_elite@pickko.com",
+      "strict_min_version": "109.0"
+    }
+  },
   "permissions": ["storage", "declarativeNetRequest"],
   "host_permissions": ["<all_urls>"],
   "declarative_net_request": {
