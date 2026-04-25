@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Content Blocker</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .credits {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 11px;
+      color: #888;
+      font-family: monospace;
+      letter-spacing: 0.5px;
+    }
+    .credits span {
+      color: #9254de;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3>SCB Elite</h3>
+    <span class="status">● Active</span>
+  </div>
+  <p class="desc">Semantic Blocking | Stealth Mode ON</p>
+
+  <label for="keywords">Custom Keywords (comma separated):</label>
+  <textarea id="keywords" placeholder="e.g. politics, exam routine, sports..."></textarea>
+
+  <button id="save">
+    <span>Save Configuration</span>
+  </button>
+
+  <div id="msg" class="msg hidden">Saved successfully!</div>
+  
+  <div class="credits">Made for fun by <span>Pickko</span></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

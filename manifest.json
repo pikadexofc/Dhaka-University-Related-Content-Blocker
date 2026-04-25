@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Content Blocker Elite",
+  "author": "Pickko",
+  "version": "3.0",
+  "description": "Zero-lag semantic blocking for custom keywords, News, and Social Media. Made for fun by Pickko.",
+  "permissions": ["storage", "declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 16px;
+  width: 300px;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #bb86fc;
+}
+
+.status {
+  font-size: 12px;
+  color: #03dac6;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+.desc {
+  font-size: 12px;
+  color: #a0a0a0;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #cfcfcf;
+}
+
+textarea {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 15px;
+  background: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  padding: 8px;
+  font-size: 13px;
+  resize: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #bb86fc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #bb86fc;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #9d4edd;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.msg {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #03dac6;
+  transition: opacity 0.3s;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
