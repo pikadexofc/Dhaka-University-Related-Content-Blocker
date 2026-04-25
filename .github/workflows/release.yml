@@ -1,0 +1,26 @@
+name: Build and Release Chrome Extension
+
+on:
+  push:
+    tags:
+      - 'v*' # Triggers whenever you push a tag like v3.0
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Zip the extension files
+        run: |
+          zip -r SCB-Elite-v3.0.zip . -x ".git/*" ".github/*" ".gitignore" "README.md"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: SCB-Elite-v3.0.zip
+          name: SCB Elite v3.0
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
