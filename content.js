@@ -126,7 +126,7 @@
       checkedNodes.add(node);
 
       const text = node.nodeValue || "";
-      const normalizedText = text.normalize("NFKC").trim();
+      const normalizedText = text.normalize("NFKC").replace(/[\u200B-\u200D\uFEFF]/g, '').trim();
       
       if (normalizedText && regex.test(normalizedText)) {
         node.nodeValue = "⛔ [BLOCKED] ⛔";
@@ -145,7 +145,7 @@
         const aria = el.getAttribute('aria-label') || '';
         
         const hasBadUrl = href.includes('du.ac.bd') || href.includes('dhakauniversity');
-        const combined = `${alt} ${aria} ${href}`.normalize("NFKC").trim();
+        const combined = `${alt} ${aria} ${href}`.normalize("NFKC").replace(/[\u200B-\u200D\uFEFF]/g, '').trim();
         
         if (hasBadUrl || (combined && regex.test(combined))) {
           if (el.tagName === 'IMG') {
