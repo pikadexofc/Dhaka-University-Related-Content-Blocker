@@ -95,9 +95,19 @@
     if (container) {
       container.dataset.scbHide = "true";
       
-      chrome.storage.local.get(['blockedCount'], (data) => {
-          chrome.storage.local.set({ blockedCount: (data.blockedCount || 0) + 1 });
-      });
+      // Safe Counter Update: Checks if extension context is still valid
+      try {
+        if (chrome.runtime && chrome.runtime.id) {
+          chrome.storage.local.get(['blockedCount'], (data) => {
+            // Double-check inside the async callback just to be safe
+            if (chrome.runtime && chrome.runtime.id) {
+              chrome.storage.local.set({ blockedCount: (data.blockedCount || 0) + 1 });
+            }
+          });
+        }
+      } catch (err) {
+        // Context was invalidated (extension reloaded). We just quietly ignore it.
+      }
 
       if (isBlurMode) {
         container.classList.add('scb_blur_flag');
