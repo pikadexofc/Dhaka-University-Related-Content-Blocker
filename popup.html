@@ -2,41 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Content Blocker</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .credits {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 11px;
-      color: #888;
-      font-family: monospace;
-      letter-spacing: 0.5px;
-    }
-    .credits span {
-      color: #9254de;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
-  <div class="header">
+  <div class="glass_card header">
     <h3>SCB Elite</h3>
     <span class="status">● Active</span>
   </div>
-  <p class="desc">Semantic Blocking | Stealth Mode ON</p>
 
-  <label for="keywords">Custom Keywords (comma separated):</label>
-  <textarea id="keywords" placeholder="e.g. politics, exam routine, sports..."></textarea>
+  <div class="glass_card stats_container">
+    <div class="stat_title">Elements Vaporized</div>
+    <div class="stat_value" id="kill_count">0</div>
+  </div>
 
-  <button id="save">
-    <span>Save Configuration</span>
-  </button>
+  <div class="glass_card controls">
+    <div class="toggle_row">
+      <span>Soft Block Blur Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="blur_toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
 
-  <div id="msg" class="msg hidden">Saved successfully!</div>
+  <div class="glass_card input_section">
+    <textarea id="keywords" placeholder="Add custom keywords separated by commas"></textarea>
+    <button id="save">Save Configuration</button>
+    <div id="msg" class="msg hidden">Saved successfully!</div>
+  </div>
   
-  <div class="credits">Made for fun by <span>Pickko</span></div>
+  <div class="credits">Made with ❤️ by pickko</div>
 
   <script src="popup.js"></script>
 </body>
