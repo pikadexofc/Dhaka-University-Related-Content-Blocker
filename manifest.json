@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Dhaka University Content Blocker",
   "author": "Pickko",
-  "version": "3.0",
+  "version": "3.0.4",
   "description": "Zero-lag semantic blocking for custom keywords, News, and Social Media. Made for fun by Pickko.",
   "browser_specific_settings": {
     "gecko": {
