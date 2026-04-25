@@ -3,7 +3,7 @@ name: Build and Release Chrome Extension
 on:
   push:
     tags:
-      - 'v*' # Triggers whenever you push a tag like v3.0
+      - 'v*' 
 
 permissions:
   contents: write
@@ -27,13 +27,3 @@ jobs:
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload and Publish to Chrome Web Store
-        uses: mnao305/chrome-extension-upload-action@v1.1.1
-        with:
-          file-path: SCB-Elite-${{ github.ref_name }}.zip
-          extension-id: ${{ secrets.EXTENSION_ID }}
-          client-id: ${{ secrets.CLIENT_ID }}
-          client-secret: ${{ secrets.CLIENT_SECRET }}
-          refresh-token: ${{ secrets.REFRESH_TOKEN }}
-          publish: true
