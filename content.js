@@ -65,6 +65,7 @@
     'div[role="feed"] > div', 'div[data-pagelet^="ProfileTimeline"] > div > div',
     '.update-components-update-v2', '.g', '.MjjYud', 
     '.WlydOe', '.SoaBEf', '.n0jPhd', 
+    '.isv-r', 'div[data-ri]', 'g-card', '.sh-dgr__grid-result',
     '.news-item', '.feed-item', '.post', '.tweet', '[data-testid="tweet"]',
     'div.x1yztbdb.x1n2onr6.xh8yej3'
   ].join(',');
@@ -88,7 +89,7 @@
     }
 
     if (!container) {
-      container = el.closest('div, p, span, a, section, header');
+      container = el.closest('div, p, span, a, section, header, h1, h2, h3, h4, h5, h6, li, figure');
     }
 
     if (container) {
@@ -111,6 +112,11 @@
 
   function scanDOM() {
     if (!regex) return;
+
+    if (!document.body) {
+      requestAnimationFrame(scanDOM);
+      return;
+    }
 
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
     let node;
